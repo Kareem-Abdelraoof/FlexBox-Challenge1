@@ -4,14 +4,16 @@
     box-sizing: border-box;
 }
 
+
 body {
     background-color: rgb(235, 234, 234);
-
 }
 
 main.main-content-container {
+    height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 main article.article-card {
@@ -30,6 +32,7 @@ main article.article-card:hover {
     width: 310px;
     height: 560px;
     margin: 10px 0;
+    transition: width .3s, height .3s;
 }
 
 article img.article-img {
@@ -41,6 +44,7 @@ article img.article-img {
 article div.label {
     margin: 25px auto;
     font-size: smaller;
+    font-weight: bold;
     color: lightgray;
     text-transform: uppercase;
     letter-spacing: 0.4px;
@@ -60,4 +64,21 @@ article p.card-paragraph {
     line-height: 25px;
     text-align: center;
     margin: 10px 25px 25px 25px;
+}
+
+
+@media screen and (max-width:700px) {
+    main.main-content-container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main article.article-card {
+        margin: 50px 0 10px 0;
+    }
+
+    main article.article-card:hover {
+        margin: 50px 0 10px 0;
+    }
 }
